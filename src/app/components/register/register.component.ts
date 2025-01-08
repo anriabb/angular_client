@@ -5,6 +5,7 @@ import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';  
 import { ReactiveFormsModule } from '@angular/forms';  
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-register',
@@ -16,12 +17,20 @@ export class RegisterComponent {
   registrationForm!: FormGroup;
   jobOptions: Job[] = [];
 
-  constructor(
-    private fb: FormBuilder,
-    private userService: UserService,
-    private router: Router,
 
-  ) {}
+    constructor(private translate: TranslateService,
+      private fb: FormBuilder,
+      private userService: UserService,
+      private router: Router,
+  
+    ){
+      translate.addLangs(['en', 'esp', 'fr']);
+      translate.setDefaultLang('en');
+    }
+  
+    switchLanguage(lang: string){
+      this.translate.use(lang);
+    }
 
   ngOnInit(): void {
     this.fetchJobOptions;

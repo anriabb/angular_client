@@ -3,41 +3,29 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ScheduleService {
-  saveSchedule(selectedDate: string, selectedShift: string) {
-    throw new Error('Method not implemented.');
-  }
-  getSchedules() {
-    throw new Error('Method not implemented.');
-  }
-  private baseUrl = 'https://localhost:44330/api/add-schedule-request';
+  private userUrl = 'https://localhost:44330/api/User';
+  private workerUrl = 'https://localhost:44330/api/Worker';
+  private adminUrl = 'https://localhost:44330/api/Admin';
 
   constructor(private http: HttpClient) {}
 
-  // Get all approved schedules
-  getApprovedSchedules(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.baseUrl}/approved`);
+  getSchedules(): Observable<any> {
+    return this.http.get<any>(`${this.userUrl}/dashboard`);
   }
 
-  // Create new schedule request
-  createScheduleRequest(scheduleRequest: { date: string; shift: string }): Observable<any> {
-    return this.http.post(`${this.baseUrl}/create`, scheduleRequest);
+  addScheduleRequest(req: any): Observable<any> {
+    console.log('scheduleRequest:', req);
+    return this.http.post(`${this.workerUrl}/add-schedule-request`, req);
+  }
+  
+  approveScheduleRequest(id: number): Observable<any> {
+    return this.http.post(`${this.adminUrl}/approve-schedule-request?scheduleId=${id}`, null);
   }
 
-  // Approve a schedule request (Admin only)
-  approveSchedule(requestId: string): Observable<any> {
-    return this.http.post(`${this.baseUrl}/approve`, { requestId });
+  deleteSchedule(id: number): Observable<any> {
+    return this.http.delete(`${this.adminUrl}/delete-schedule/${id}`);
   }
-
-  // Decline a schedule request (Admin only)
-  declineSchedule(requestId: string): Observable<any> {
-    return this.http.post(`${this.baseUrl}/decline`, { requestId });
-  }
-
-  // Delete an existing schedule (Admin only)
-  deleteSchedule(scheduleId: string): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/delete/${scheduleId}`);
-  }
-}
+} 

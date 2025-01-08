@@ -1,4 +1,7 @@
 {
+  
+
+    "LOG_IN": "Log In",
     "REGISTER": "Register",
     "FIRST_NAME": "First Name",
     "LAST_NAME": "Last Name",
@@ -7,5 +10,54 @@
     "CONFIRM_PASSWORD": "Confirm Password",
     "JOB": "Job",
     "SUBMIT": "Submit",
-    "SIGNUP_MESSAGE": "Sign Up PLEASE"
+    "SIGNUP_MESSAGE": "Sign Up PLEASE",
+
+    "NOT_REGISTERED": "Not Registered?",
+    "CREATE_ACC": "Create an Account",
+    "CHOOSE_LANG": "Choose Language",
+    "SMALL_EMAIL": "*Enter Email",
+    "SMALL_PASS": "*Enter Password",
+    "SMALL_FNAME": "*Enter Your First Name",
+    "SMALL_LNAME": "*Enter Your Last name",
+    "SMALL_PASS_REG": "*Enter Min. 6 Characters",
+    "SMALL_CONF_PASS": "*Confirm Password",
+    "SMALL_JOB":"*Choose The Job Title",
+    "CONF-PASS": "Confirm Password",
+    "BACK_TO_LOGIN": "Back To Log In",
+
+    "LOG_OUT": "Log Out",
+
+    "DASHBOARD":"Dashboard",
+    "CURR_PERIOD": "Current Period",
+    "NEXT": "Next",
+    "PREVIOUS": "Previous",
+    "SELECT_DATE": "Select Date",
+    "SELECT_SHIFT": "Select Shift",
+    "MORNING": "Morning",
+    "EVENING": "Evening",
+
+    "MONTHS": {
+    "Jan": "Jan",
+    "Feb": "Feb",
+    "Mar": "Mar",
+    "Apr": "Apr",
+    "May": "May",
+    "Jun": "Jun",
+    "Jul": "Jul",
+    "Aug": "Aug",
+    "Sep": "Sep",
+    "Oct": "Oct",
+    "Nov": "Nov",
+    "Dec": "Dec"
+  },
+  "DAYS": {
+    "Sun": "Sun",
+    "Mon": "Mon",
+    "Tue": "Tue",
+    "Wed": "Wed",
+    "Thu": "Thu",
+    "Fri": "Fri",
+    "Sat": "Sat"
+  }
+
 }

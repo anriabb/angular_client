@@ -3,11 +3,15 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Job } from '../interfaces/job';
+
  
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  private userUrl = 'https://localhost:44330/api/User';
+  private adminUrl = 'https://localhost:44330/api/Admin';
+
   private apiUrl = 'https://localhost:44330/api/User';
 
   constructor(
@@ -39,4 +43,17 @@ export class UserService {
     localStorage.removeItem('token');
     this.router.navigate(['/login']);
   }
+  getUsers(): Observable<any> {
+    return this.http.get<any>(`${this.userUrl}/users`);
+  }
+
+  deleteUser(id: number): Observable<any> {
+    return this.http.delete(`${this.adminUrl}/delete-user/${id}`);
+  }
+  
+
+  changeUserRole(req: any): Observable<any> {
+    return this.http.post(`${this.adminUrl}/change-user-role`, req);
+  }
+
 }

@@ -33,6 +33,7 @@ export class WorkerComponent implements OnInit{
   workerForm!: FormGroup;
   logOut(){
     this.userService.logOut();
+    this.router.navigate(['/login']);
   }
   login():void{
     this.router.navigate(['/worker']);

@@ -5,6 +5,10 @@ nav{
     display: flex;
     justify-content: space-between;
   }
+  .nav-link{
+    cursor: pointer;
+    margin-top: 10px;
+  }
   .nav-btns{
     height: 100%;
     width: 120px;

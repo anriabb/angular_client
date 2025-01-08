@@ -1,12 +1,61 @@
 {
-    "REGISTER": "S'inscrire",
-    "FIRST_NAME": "Prenom",
-    "LAST_NAME": "Non de familia",
-    "EMAIL": "Mail",
-    "PASSWORD": "mot de passe",
-    "CONFIRM_PASSWORD": "Confirmer de passe",
-    "JOB": "emploi",
-    "SUBMIT": "soumettre",
-    "SIGNUP_MESSAGE": "FRANGULAD: SIGN UP PLEASE"
+    "LOG_IN": "შესვლა",
+    "REGISTER": "რეგისტრაცია",
+    "FIRST_NAME": "სახელი",
+    "LAST_NAME": "გვარი",
+    "EMAIL": "ელ. ფოსტა",
+    "PASSWORD": "პაროლი",
+    "CONFIRM_PASSWORD": "დაადასტურეთ პაროლი",
+    "JOB": "სამუშაო",
+    "SUBMIT": "შენახვა",
+    "SIGNUP_MESSAGE": "FRANGULAD: SIGN UP PLEASE",
+
+    "NOT_REGISTERED": "არ ხართ რეგისტრირებული?",
+    "CREATE_ACC": "ანგარიშის შექმნა",
+    "CHOOSE_LANG": "აირჩიეთ ენა",
+    "SMALL_EMAIL": "*შეიყვანეთ ელ. ფოსტა",
+    "SMALL_PASS": "*შეიყვანეთ პაროლი",
+    "SMALL_FNAME": "*შეიყვანეთ თქვენი სახელი",
+    "SMALL_LNAME": "*შეიყვანეთ თქვენი გვარი",
+    "SMALL_PASS_REG": "*შეიყვანეთ მინ. 6 სიმბოლო",
+    "SMALL_CONF_PASS": "*შეიყვანეთ პაროლი სწორად",
+    "SMALL_JOB":"*აირჩიეთ სამუშაო ადგილი",
+    "CONF-PASS": "დაადასტურეთ პაროლი",
+    "BACK_TO_LOGIN": "დაბრუნება",
+
+    "LOG_OUT": "გასვლა",
+
+    "DASHBOARD":"სამუშაო დაფა",
+    "CURR_PERIOD": "მიმდინარე პერიოდი",
+    "NEXT": "შემდეგი",
+    "PREVIOUS": "წინა",
+    "SELECT_DATE": "თარიღის არჩევა",
+    "SELECT_SHIFT": "ცვლის არჩევა",
+    "MORNING": "დილა",
+    "EVENING": "საღამო",
+
+    "MONTHS": {
+    "Jan": "იანვარი",
+    "Feb": "თებერვალი",
+    "Mar": "მარტი",
+    "Apr": "აპრილი",
+    "May": "მაისი",
+    "Jun": "ივნისი",
+    "Jul": "ივლისი",
+    "Aug": "აგვისტო",
+    "Sep": "სექტემბერი",
+    "Oct": "ოქტომბერი",
+    "Nov": "ნოემბერი",
+    "Dec": "დეკემბერი"
+  },
+  "DAYS": {
+    "Sun": "კვი",
+    "Mon": "ორშ",
+    "Tue": "სამ",
+    "Wed": "ოთხ",
+    "Thu": "ხუთ",
+    "Fri": "პარ",
+    "Sat": "შაბ"
+  }
 
 }

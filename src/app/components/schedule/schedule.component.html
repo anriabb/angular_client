@@ -1,0 +1,91 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <br>
+  <h1 class="text-center">{{'DASHBOARD' | translate}}</h1><br><br>
+  <div class="d-flex justify-content-between mb-4">
+    <button class="btn btn-outline-primary" (click)="previousWeek()">
+      &larr; {{'PREVIOUS' | translate}}
+    </button>
+    <h5 class="text-center">{{'CURR_PERIOD' | translate}} {{ formatWeekForDisplay() }}</h5>
+    <button class="btn btn-outline-primary" (click)="nextWeek()">
+      {{'NEXT' | translate}} &rarr;
+    </button>
+  </div>
+
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th class="text-center">{{'JOB' | translate}}</th>
+        <th *ngFor="let day of weekDays" class="text-center">
+          <span class="weekday">{{ getDayName(day) }}</span>
+        </th>
+      </tr>
+      <tr>
+        <th class="text-center"></th>
+        <th *ngFor="let day of weekDays" class="text-center">
+          <span class="date">{{ formatDateForDisplay(day) }}</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let job of jobs">
+        <td class="text-center font-weight-bold">{{ job.title }}</td>
+        <td *ngFor="let day of weekDays" class="text-center">
+          <div
+            *ngFor="let shift of getShiftsForDateAndRole(day, job.id)"
+            class="shift-item d-grid gap-2"
+            [attr.data-shift]="determineShift(shift.startTime)"
+          >
+            {{ determineShift(shift.startTime) }} - 
+            {{ shift.firstName }} {{ shift.lastName }}
+            <button *ngIf="getRoleFromToken() === 1" class="btn btn-danger btn-sm" (click)="deleteSchedule(shift.id)">Remove</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="getRoleFromToken() == 2" style="width: 500px; margin: auto;">
+    <form class="form" [formGroup]="scheduleForm">  
+      <div class="form-group">
+        <label for="shiftDate">{{'SELECT_DATE' | translate}}</label>
+        <input
+          type="date"
+          id="shiftDate"
+          class="form-control"
+          formControlName="shiftDate"
+          name="shiftDate"
+          required
+        />
+      </div>
+      <br>
+      <div class="form-group" >
+        <label for="shiftType">{{'SELECT_SHIFT' | translate}}</label>
+        <select
+          id="shiftType"
+          class="form-control"
+          formControlName="shiftType"
+          name="shiftType"
+          required
+>
+          <option value="morning">{{'MORNING' | translate}}</option>
+          <option value="evening">{{'EVENING' | translate}}</option>
+        </select>
+      </div>
+      <br>
+      <button type="button"  id="sub-btn" class="btn btn-success" (click)="addScheduleRequest()">
+        {{'SUBMIT' | translate}}
+      </button>
+    </form>
+  </div>
+  <br>
+  <footer>
+    <h5 id="h5">{{'CHOOSE_LANG' | translate}}</h5>
+    <div id="lang-div">
+        
+        <button class="lang-btns" id="eng" (click)="switchLanguage('en')">EN</button>
+        <button class="lang-btns" id="esp" (click)="switchLanguage('esp')">ESP</button>
+        <button class="lang-btns" id="fr" (click)="switchLanguage('fr')">GE</button>
+    </div>
+  </footer>

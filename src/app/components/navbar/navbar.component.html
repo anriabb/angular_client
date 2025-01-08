@@ -1,0 +1,4 @@
+<nav class="navbar navbar-dark bg-dark justify-content-between">
+    <a class="navbar-brand">Shift Controller</a>
+    <button *ngIf="isLoggedIn()" type="button" class="btn btn-outline-danger" (click)="logout()">{{'LOG_OUT' | translate}}</button>
+  </nav>

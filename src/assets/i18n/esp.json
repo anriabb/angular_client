@@ -1,12 +1,61 @@
 {
+"LOG_IN": "Acceso",
 "REGISTER": "Registracion",
 "FIRST_NAME": "Nombre",
 "LAST_NAME": "Apelidos",
 "EMAIL": "Mail",
 "PASSWORD": "Contrasena",
-"CONFIRM_PASSWORD": "Confirmacion de contrasena",
+"CONFIRM_PASSWORD": "Confirmacion de Contrasena",
 "JOB": "Trabajar",
-"SUBMIT": "Claro",
-"SIGNUP_MESSAGE": "hACE REGISTRACION, POR FAVOR"
+"SUBMIT": "Enviar",
+
+"NOT_REGISTERED": "No Registrado?",
+"CREATE_ACC": "Crear una Cuenta",
+"CHOOSE_LANG": "Elegir Idioma",
+"SMALL_EMAIL": "*Ingresar Correo Electronico",
+"SMALL_PASS": "*Ingresar Contrasena",
+"SMALL_FNAME": "*Ingresar Nombre",
+"SMALL_LNAME": "*Ingresar Apelidos",
+"SMALL_PASS_REG": "*Ingresar Minimo 6 Caracteres",
+"SMALL_CONF_PASS": "*Confirmacion de Contrasena",
+"SMALL_JOB": "*Elegir Trabajar",
+"CONF-PASS": "Confirmacion de Contrasena",
+"BACK_TO_LOGIN": "Volver",
+
+"LOG_OUT": "Cerrar",
+
+"DASHBOARD":"Tablero",
+"CURR_PERIOD": "Period Actual",
+"NEXT": "Siguiente",
+"PREVIOUS": "Anterior",
+"SELECT_DATE": "Elegir Fecha",
+"SELECT_SHIFT": "Elegir Turno",
+"MORNING": "Manana",
+"EVENING": "Tarde",
+
+"MONTHS": {
+  "Jan": "enero",
+  "Feb": "febrero",
+  "Mar": "marzo",
+  "Apr": "abril",
+  "May": "mayo",
+  "Jun": "junio",
+  "Jul": "julio",
+  "Aug": "agosto",
+  "Sep": "septiembre",
+  "Oct": "octubre",
+  "Nov": "noviembre",
+  "Dec": "diciembre"
+},
+"DAYS": {
+  "Sun": "dom",
+  "Mon": "lun",
+  "Tue": "mar",
+  "Wed": "mié",
+  "Thu": "jue",
+  "Fri": "vie",
+  "Sat": "sáb"
+}
+
 
 }

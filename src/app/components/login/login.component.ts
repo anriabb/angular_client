@@ -6,6 +6,7 @@ import { OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { TemplateRef } from '@angular/core';
 import { AfterViewInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -18,13 +19,20 @@ export class LoginComponent implements OnInit, AfterViewInit {
   userService!:UserService
   loginForm!: FormGroup;
   constructor(
+    private translate: TranslateService,
     private fb: FormBuilder,
     userService:UserService,
     private router: Router,
   ){
     this.userService = userService;
+    translate.addLangs(['en', 'esp', 'fr']);
+      translate.setDefaultLang('en');
 
   }
+  
+    switchLanguage(lang: string){
+      this.translate.use(lang);
+    }
   ngAfterViewInit(){
     console.log(this.form1)
   }
